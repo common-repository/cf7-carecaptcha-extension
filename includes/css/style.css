@@ -1,0 +1,450 @@
+/* Set correct box-sizing */
+.cc-toggle *,
+.cc-modal * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* Set global font settings */
+.cc-toggle,
+.cc-modal {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Start styling for toggle box in contact form */
+.cc-toggle-wrapper {
+    display: block;
+}
+
+.cc-toggle {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 0.625em;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.08);
+    -webkit-transition: box-shadow 0.25s ease-out;
+    -moz-transition: box-shadow 0.25s ease-out;
+    -o-transition: box-shadow 0.25s ease-out;
+    transition: box-shadow 0.25s ease-out;
+}
+
+.cc-toggle-wrapper:not(.checked) .cc-toggle:hover {
+    box-shadow: 2px 3px 8px 4px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 2px 3px 8px 4px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 2px 3px 8px 4px rgba(0, 0, 0, 0.08);
+}
+
+.cc-toggle-wrapper.checked .cc-toggle {
+    cursor: default;
+}
+
+.cc-toggle-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 0;
+    font-size: 0;
+    margin: 0 20px 0 10px;
+    border: 1px solid #c9c5c6;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.cc-toggle-input[aria-invalid="true"] ~ .cc-toggle .cc-toggle-checkbox {
+    border-color: red;
+}
+
+.cc-toggle-input[value="true"] ~ .cc-toggle .cc-toggle-checkbox {
+    border-color: #c9c5c6;
+}
+
+.cc-toggle-label {
+    font-family: sans-serif;
+    font-size: 1em;
+    pointer-events: none;
+}
+
+.cc-toggle-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: auto;
+    pointer-events: none;
+}
+
+.cc-toggle-logo > svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 45px;
+}
+
+.cc-toggle-logo > span {
+    display: block;
+    font-size: 9px;
+    white-space: nowrap;
+    color: #c9c5c6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Styling for modal/overlay over entire page */
+.cc-modal {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999999;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease-out;
+    -moz-transition: opacity 0.25s ease-out;
+    -o-transition: opacity 0.25s ease-out;
+    transition: opacity 0.25s ease-out;
+}
+
+.cc-modal.show {
+    opacity: 1;
+}
+
+/* The close element is a fullscreen layer */
+.cc-modal-close {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 0;
+}
+
+.cc-modal-content {
+    width: 100%;
+    height: auto;
+    max-width: 419px;
+    position: relative;
+    margin: 6.25em auto;
+    padding: 30px 0 20px;
+    transform: translateY(-3.125em);
+    background-color: #fff;
+    -webkit-transition: transform 0.25s cubic-bezier(.55,0,.1,1);
+    -moz-transition: transform 0.25s cubic-bezier(.55,0,.1,1);
+    -o-transition: transform 0.25s cubic-bezier(.55,0,.1,1);
+    transition: transform 0.25s cubic-bezier(.55,0,.1,1);
+}
+
+.cc-modal.show .cc-modal-content {
+    transform: translateY(0);
+}
+
+/* Base structure of modal content */
+.cc-modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 6%;
+    margin-bottom: 30px;
+}
+
+.cc-modal-body {
+    padding: 0 6%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c9c5c6;
+}
+
+.cc-modal-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 6%;
+}
+
+/* The title in modal header */
+.cc-modal-title {
+    flex: 0 1 66%;
+    line-height: 1.2;
+}
+
+/* Image list grid <ul> in modal body */
+.cc-modal-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* All images (modal header and body) */
+.cc-modal-image {
+    position: relative;
+    display: inline-block;
+    flex: 0 1 32%;
+    width: 32%;
+    height: auto;
+    margin-bottom: 2%;
+    background-color: #000;
+    background-image: url('../images/images.jpg');
+    background-size: 1300% 500%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-transition: background-position 0.15s cubic-bezier(.55,0,.1,1), border-width 0.15s ease-out;
+    -moz-transition: background-position 0.15s cubic-bezier(.55,0,.1,1), border-width 0.15s ease-out;
+    -o-transition: background-position 0.15s cubic-bezier(.55,0,.1,1), border-width 0.15s ease-out;
+    transition: background-position 0.15s cubic-bezier(.55,0,.1,1), border-width 0.15s ease-out;
+}
+
+.cc-modal-image:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+/* Specific styling for the image in modal header */
+.cc-modal-header .cc-modal-image {
+    margin-bottom: 0;
+    /* border: 1px solid #c9c5c6; */
+    box-shadow: inset 0 0 0 1px #c9c5c6;
+}
+
+/* Specific sytling for images in body/grid */
+.cc-modal-body .cc-modal-image {
+    display: inline-block;
+    cursor: pointer;
+    border: 0 solid #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+.cc-modal-body .cc-modal-image:nth-child(n+7) {
+    margin-bottom: 0;
+}
+
+.cc-modal-body .cc-modal-image.selected {
+    border-width: 0.625em;
+}
+
+.cc-modal-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 10px 0;
+    font-size: 1em;
+    text-align: center;
+    color: #579ce3;
+}
+
+/* Elements in modal footer */
+.cc-modal-footer-col {
+    flex: 0 1 50%;
+    width: 50%;
+    text-align: center;
+}
+
+.cc-modal-footer-col:first-child,
+.cc-modal-footer-col:last-child {
+    flex: 0 1 25%;
+    width: 25%;
+}
+
+.cc-modal-footer-col:first-child {
+    text-align: left;
+}
+
+.cc-modal-footer-col:last-child {
+    text-align: right;
+}
+
+.cc-modal-footer-reload {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transform: scaleX(-1) rotate(-90deg);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: color 0.25s ease-out, transform 0.25s ease-out;
+    -moz-transition: color 0.25s ease-out, transform 0.25s ease-out;
+    -o-transition: color 0.25s ease-out, transform 0.25s ease-out;
+    transition: color 0.25s ease-out, transform 0.25s ease-out;
+}
+
+.cc-modal-footer-reload:hover {
+    color: #579ce3;
+    transform: scaleX(-1) rotate(-450deg);
+}
+
+.cc-modal-footer-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 96px;
+    height: 30px;
+    background-size: 100% auto;
+    background-image: url('../images/logo-noah.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.cc-modal-footer-logo > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cc-modal-footer-link {
+    display: inline-block;
+    margin: 6px 0 0;
+}
+
+.cc-modal-footer-link a {
+    font-size: 0.75em;
+    color: #b1b1b1;
+    text-decoration: underline;
+    -webkit-transition: color 0.25s ease-out;
+    -moz-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+}
+
+.cc-modal-footer-link a:hover {
+    color: #579ce3;
+    text-decoration: underline;
+}
+
+.cc-modal-footer-verify {
+    display: inline-block;
+    padding: 0.625em 1.25em;
+    margin-left: auto;
+    color: #fff;
+    cursor: pointer;
+    background-color: #579ce3;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background-color 0.25s ease-out;
+    -moz-transition: background-color 0.25s ease-out;
+    -o-transition: background-color 0.25s ease-out;
+    transition: background-color 0.25s ease-out;
+}
+
+.cc-modal-footer-verify:hover,
+.cc-modal-footer-verify:focus {
+    background-color: #0b5aab;
+}
+
+/* Animations */
+.cc-modal-image:after,
+.cc-toggle-checkbox:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -2px;
+    right: -8px;
+    background-image: url('../images/checkmark-sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border: none;
+    outline: 0;
+}
+
+.cc-modal-image:after {
+    right: -0.625em;
+    top: -0.625em;
+}
+
+.cc-modal-image.selected:after,
+.cc-toggle-wrapper.checked .cc-toggle-checkbox:before {
+    animation: drawCheckMark 0.2s steps(21) forwards;
+}
+
+.cc-toggle-wrapper.checked .cc-toggle-checkbox:before {
+    animation-delay: 1s;
+    animation-duration: 0.75s;
+}
+
+.cc-toggle-wrapper .cc-toggle-logo > svg > path {
+    transform-origin: 50px 50px;
+}
+
+.cc-toggle-wrapper.checked .cc-toggle-logo > svg > path:nth-child(1) {
+    animation: expandHand1 1.75s cubic-bezier(.55,0,.1,1) 0.43s;
+}
+
+.cc-toggle-wrapper.checked .cc-toggle-logo > svg > path:nth-child(2) {
+    animation: expandHand2 1.75s cubic-bezier(.55,0,.1,1) 0.34s;
+}
+
+.cc-toggle-wrapper.checked .cc-toggle-logo > svg > path:nth-child(3) {
+    animation: expandHand3 1.75s cubic-bezier(.55,0,.1,1) 0.25s;
+}
+
+@keyframes drawCheckMark {
+    100% { background-position: 0 -630px; }
+}
+
+@keyframes expandHand1 {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes expandHand2 {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes expandHand3 {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}

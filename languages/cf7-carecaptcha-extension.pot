@@ -1,0 +1,45 @@
+# Copyright (C) 2018 Contact Form 7 - CareCAPTCHA Extension
+# This file is distributed under the same license as the Contact Form 7 - CareCAPTCHA Extension package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Form 7 - CareCAPTCHA Extension 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/cf7-carecaptcha-extension\n"
+"POT-Creation-Date: 2018-04-12 14:26:08+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: contact-form-7-carecaptcha-extension.php:40
+msgid "Select all images below that match this one:"
+msgstr ""
+
+#: contact-form-7-carecaptcha-extension.php:41
+msgid "Please try again."
+msgstr ""
+
+#: contact-form-7-carecaptcha-extension.php:42
+msgid "OK"
+msgstr ""
+
+#: contact-form-7-carecaptcha-extension.php:43
+msgid "Download Plugin"
+msgstr ""
+
+#: contact-form-7-carecaptcha-extension.php:44
+msgid "Be human and support the end of animal cruelty."
+msgstr ""
+
+#: contact-form-7-carecaptcha-extension.php:45 contact-form-7-carecaptcha-extension.php:47
+msgid "Be human and support the end of animal testing."
+msgstr ""
+
+#: contact-form-7-carecaptcha-extension.php:46 contact-form-7-carecaptcha-extension.php:48
+msgid "Be human and support the end of factory farming."
+msgstr ""
+
+#: contact-form-7-carecaptcha-extension.php:152
+msgid "I’m not a robot"
+msgstr ""
